@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endif %}
+<div class="container">
+    <div class="card card-body" style="border: 1px solid black; box-shadow: 0 0 10px black;">
+       
+        
+        <div class="row">
+            <div class="col-md-12 card card-body" style="box-shadow: 0 0 5px black; margin: 5px;">
+               <b> <h4>Liver Disease</h4></b>
+                <p>The liver plays an important role in many bodily functions from protein production and blood clotting to cholesterol, glucose (sugar), and iron metabolism.
+			Many diseases and conditions can affect the liver, for example, certain drugs like excessive amounts of acetaminophen, and acetaminophen combination medications like Vicodin and Norco, as well as statins, cirrhosis, alcohol abuse,
+			hepatitis A, B, C, D, and E, infectious mononucleosis (Epstein Barr virus), nonalcoholic fatty liver disease (NASH), and iron overload (hemochromatosis). Liver disease is a broad term that covers all the potential problems that cause the liver to fail to perform its designated functions. Usually, more than 75% or three quarters of liver tissue needs to be affected before a decrease in function occurs.
+			This liver disease predictor helps you to predict liver disease based on the following datas.</p>
+            </div>
+        </div>
+        
+        
+       <b> <h4>Data Description:</h4> </b>The following datas are needed for the effective prediction of liver disease.
+        <ul>
+            <b><li>Age </li></b>
+<ul> The age of the person </ul>
+
+							 <b><li>Gender</li></b>
+<ul> The gender of the person (Male/Female) </ul>
+							 <b><li>Total Bilirubin</li></b>
+<ul>  It is a measure that denotes the effective liver function</ul>
+
+							<b> <li>Alkaline Phosphotase</li> </b><ul> Alkaline phosphatase (ALP) is a measure of enzyme in a person’s blood that helps break down proteins.</ul>
+							<b> <li>Alanine Aminotransferase</b>
+			</li> <ul>The alanine aminotransferase (ALT) test is a measure of the enzyme in blood  that checks for liver damage. </ul>
+			<b><li>Aspartate Aminotransferase </b>
+			</li> <ul> Aspartate aminotransferase (AST) is a measure of an enzyme found in cells throughout the body but mostly in the heart and liver. </ul>
+			<b><li>Total Protiens</li></b> <ul> The total protein test measures the total amount of protein in your blood and specifically looks for the amount of albumin and globulin.</ul>
+			<b><li>Albumin</li></b> <ul> Albumin is a measure of protein made by your liver. Albumin helps keep fluid in your bloodstream so it doesn't leak into other tissues.</ul>
+
+			<b><li>Albumin and Globulin Ratio</li></b> <ul>This ratio is the measure of albumin and globulin level that identifies the causes of change in total serum protein. </ul>
+        </ul>
+        <br>
+ <center><h2><a  href="{{ url_for('liverPage') }}" class="btn btn-block btn-primary"> GO TO PREDICTOR-></a> </center></h2>
+    </div>
+</div>
+{% endblock %}

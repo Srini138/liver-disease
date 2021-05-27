@@ -1,0 +1,118 @@
+{% extends 'main.html' %}
+{% block content %}
+<style>
+.back {
+  background: #e2e2e2 ;
+  width: 50%;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 25%
+}
+</style>
+<div class="back">
+      <div class="div-center">
+        <div class="content">
+<center><h2>Enter the details</h2> </center>
+<hr>
+
+              <form action="{{url_for('predictPage')}}" method="POST">
+                <div class="form-group">
+                  <label for="age"> <b> Age</label> </b>
+                  <input type="number" min="1" max="90" placeholder="Age(1-90) " class="form-control" id="age" name="age" required="required">
+                </div>
+
+                <div class="form-group">
+                    <label for="gender"> <b> Gender</label> </b>
+                    <select name="gender" id="gender" required="required" class="form-control">
+                    <option disabled selected value> -- Select an Option -- </option>
+                    <option value="male">Male</option>
+                    <option value="Female">Female</option>
+                    </select>
+                </div>
+
+
+
+                <div class="Total_Bilirubin">
+                  <label for="trestbps"> <b>Total Bilirubin</label> </b>
+                  <input type="number" min="0.2" max="5"  step="0.1"  placeholder="Total Bilirubin(0.2-5) "class="form-control" id="Total_Bilirubin" name="Total_Bilirubin" required="required">
+                </div>
+
+
+                <div class="form-group">
+                  <label for="Alkaline_Phosphotase"> <b>Alkaline Phosphotase</label></b>
+                  <input type="number"  min="20" max="472" step="0.1" placeholder="Alkaline Phosphotase(20-470) " class="form-control" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase" required="required">
+                </div>
+
+
+
+
+                <div class="form-group">
+                  <label for="Alamine_Aminotransferase"><b>Alanine Aminotransferase</label></b>
+                  <input type="number"  min="3" max="113" step="0.1"  class="form-control" placeholder="Alanine Aminotransferase(3-120)" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase" required="required">
+                </div>
+
+                <div class="form-group">
+                  <label for="Aspartate_Aminotransferase"><b>Aspartate Aminotransferase</label></b>
+                  <input type="number" min="7" max="176"  step="0.1" class="form-control" placeholder="Aspartate Aminotransferase(7-176)" id="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase" required="required">
+                </div>
+
+                <div class="form-group">
+                  <label for="Total_Protiens"><b>Total Protiens</label></b>
+                  <input type="number" min="2" max="10" step="0.1"  class="form-control" id="Total_Protiens" placeholder="Total Protiens(2-10)" name="Total_Protiens" required="required">
+                </div>
+
+                <div class="form-group">
+                  <label for="Albumin"><b>Albumin</label></b>
+                  <input type="number" min="0.5"  max="5.5"step="0.1"  class="form-control" placeholder="Albumin(0.5-5.5)" id="Albumin" name="Albumin" required="required">
+                </div>
+
+                <div class="form-group">
+                  <label for="Albumin_and_Globulin_Ratio"><b>Albumin and Globulin Ratio</label></b>
+                  <input type="number" min="0.3" max="3" step="0.01" class="form-control" placeholder="Albumin and Globulin Ratio(0.3-3)" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio" required="required">
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <center>  <button type="submit" class="btn btn-primary">Predict</button> </center>
+                <hr />
+
+              </form>
+            </div>
+        </div>
+      </div>
+</body>
+</html>
+
+
+{% endblock %}
